@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd5d6c77.css",
-    "main.js": "/static/js/main.a49de0fb.js",
-    "index.html": "/index.html"
+    "main.css": "/cat-detector-web/static/css/main.dd5d6c77.css",
+    "main.js": "/cat-detector-web/static/js/main.261c709e.js",
+    "index.html": "/cat-detector-web/index.html"
   },
   "entrypoints": [
     "static/css/main.dd5d6c77.css",
-    "static/js/main.a49de0fb.js"
+    "static/js/main.261c709e.js"
   ]
 }

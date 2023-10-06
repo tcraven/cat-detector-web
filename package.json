@@ -1,5 +1,6 @@
 {
   "name": "cat-detector-web",
+  "homepage": "https://tcraven.github.io/cat-detector-web/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
