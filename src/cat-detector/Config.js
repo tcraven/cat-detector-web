@@ -2,8 +2,11 @@ import { Amplify, Auth as AmplifyAuth } from 'aws-amplify';
 import { AWSIoTProvider } from '@aws-amplify/pubsub';
 
 const AWS_REGION = 'us-west-2';
-const OAUTH_REDIRECT_URL = 'https://tcraven.github.io/cat-detector-web/';
-// const OAUTH_REDIRECT_URL = 'http://localhost:3000/';
+const OAUTH_REDIRECT_URL = (
+    (process.env.NODE_ENV === 'production') ?
+    'https://tcraven.github.io/cat-detector-web/' :
+    'http://localhost:3000/'
+);
 
 const config = {
     iot: {
