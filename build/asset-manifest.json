@@ -1,11 +1,16 @@
 {
   "files": {
-    "main.css": "/cat-detector-web/static/css/main.dd5d6c77.css",
-    "main.js": "/cat-detector-web/static/js/main.261c709e.js",
+    "main.css": "/cat-detector-web/static/css/main.3446e654.css",
+    "main.js": "/cat-detector-web/static/js/main.f9e7943e.js",
+    "static/media/cat-detector-architecture.jpg": "/cat-detector-web/static/media/cat-detector-architecture.f8c71ee03c5c328e442a.jpg",
+    "static/media/rainbow-swirl.jpg": "/cat-detector-web/static/media/rainbow-swirl.0025082c15c1790429ff.jpg",
+    "static/media/cardinal-peak-logo.jpg": "/cat-detector-web/static/media/cardinal-peak-logo.b44614826279cf6d0e66.jpg",
+    "static/media/cat-2.webp": "/cat-detector-web/static/media/cat-2.35566442d706d1fee329.webp",
+    "static/media/cat-1.webp": "/cat-detector-web/static/media/cat-1.954d058e4ffa21bd048f.webp",
     "index.html": "/cat-detector-web/index.html"
   },
   "entrypoints": [
-    "static/css/main.dd5d6c77.css",
-    "static/js/main.261c709e.js"
+    "static/css/main.3446e654.css",
+    "static/js/main.f9e7943e.js"
   ]
 }
