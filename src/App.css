@@ -1,5 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+body {
+    max-width: 1200px;
+    min-width: 360px;
+    font-size: 14px;  /* Is being ignored */
+    font-family: sans-serif;
+}
+
+.cat-detector-container {
+    text-align: center;
+}
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Short Stack', cursive;
+}
+.video-text-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.buttons-container {
+    margin-bottom: 20px;
+}
+.button-icon {
+    margin-right: 2px;
+    width: 25px;
+    height: 25px;
+    margin-top: -3px;
+    margin-left: -8px;
+}
+.button-icon-sign-out {
+    margin-top: 0px;
+    margin-right: -4px;
+    margin-left: 0px;
+}
+.sign-out-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.sign-out-text {
+    margin-left: 10px;
+    position: relative;
+    top: 1px;
+}
+
+.logos-container {
+    padding: 30px;
+    text-align: center;            
+}
+.logos-container a {
+    text-decoration: none !important;
+}
+.cardinal-peak-logo {
+    margin-right: 10%;
+    max-width: 220px;
+    width: 40%;
+    vertical-align: middle;
+}
+.aws-logo {
+    width: 33%;
+    max-width: 175px;
+    vertical-align: middle;
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 #video {
     width: 100%;
     border-radius: 20px;
     aspect-ratio: 16 / 9;
+}
+
+.cat-container {
+    z-index: -1;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    padding-left: 25%;
+    padding-right: 25%;
+    margin-bottom: -8%;
+    max-height: 300px;
+    transition: max-height 0.5s linear, margin-bottom 0.1s linear 0.0s;
+}
+.cat-container-hidden {
+    margin-bottom: 0%;
+    max-height: 0px;
+    transition: max-height 0.5s linear, margin-bottom 0.25s linear 0.25s;
+}
+.background-image {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    z-index: -1;
+    animation: background-image-keyframes 10s linear infinite;
+}
+@keyframes background-image-keyframes {
+    from {
+        transform: scale(2) translate(0px, 0px) rotate(0deg) translateZ(0);
+    }
+    to {
+        transform: scale(2) translate(0px, 0px) rotate(360deg) translateZ(0);
+    }
+}
+.cat-image {
+    width: 100%;
+}
+
+.info {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+.nav {
+    border-bottom: solid 1px #ddd !important;
+    margin-bottom: 10px !important;
+}
+.nav-link {
+    color: #555 !important;
+    border-bottom: solid 4px transparent !important;
+}
+.nav-link.active {
+    color: #0d6efd !important;
+    border-bottom: solid 4px #0d6efd !important;
+    font-weight: normal !important;
+}
+.tab-pane {
+    /* text-align: justify; */
+}
+.architecture-diagram {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.tab-pane h2 {
+    font-size: 20px;
+}
+.tab-pane h3 {
+    font-size: 18px;
+}
+.tab-pane h4 {
+    font-size: 16px;
 }

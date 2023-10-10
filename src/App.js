@@ -4,6 +4,11 @@ import { Auth } from './cat-detector/Auth';
 import { Config } from './cat-detector/Config';
 import { Iot } from './cat-detector/Iot';
 import { WebRtc } from './cat-detector/WebRtc';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { CatDetector } from './components/CatDetector';
+import { InfoTabs } from './components/InfoTabs';
 
 const App = () => {
     const [ isCatDetected, setIsCatDetected ] = useState(false);
@@ -78,35 +83,27 @@ const App = () => {
     }
 
     return (
-        <div>
-
-            <button onClick={signOut}>
-                Log Out
-            </button>
-
-            { isCatDetected && (
-                <div>CAT DETECTED</div>
-            ) }
-            
-            <video
-                ref={videoElRef}
-                id="video"
-                autoPlay={true}
-                playsInline={true}
-                controls={true}
-            ></video>
-
-            { !isVideoPlaying ? (
-                <button onClick={startVideo}>
-                    Start Video
-                </button>
-            ) : (
-                <button onClick={stopVideo}>
-                    Stop Video
-                </button>
-            ) }
-
-        </div>
+        <Container>
+            <Row xs={1} lg={2}>
+                <Col>
+                    <CatDetector
+                        isCatDetected={isCatDetected}
+                        isVideoPlaying={isVideoPlaying}
+                        signOut={signOut}
+                        startVideo={startVideo}
+                        stopVideo={stopVideo}
+                        videoElRef={videoElRef}
+                    />
+                </Col>
+                <Col>
+                    <InfoTabs />
+                </Col>
+            </Row>
+            <hr />
+            <div className="footer">
+                &copy; 2023 Cardinal Peak
+            </div>
+        </Container>
     );
 };
 
