@@ -1,32 +1,8 @@
 import { Amplify, Auth as AmplifyAuth } from 'aws-amplify';
 import { AWSIoTProvider } from '@aws-amplify/pubsub';
+import { config } from '../config';
 
-const AWS_REGION = 'us-west-2';
-const OAUTH_REDIRECT_URL = (
-    (process.env.NODE_ENV === 'production') ?
-    'https://tcraven.github.io/cat-detector-web/' :
-    'http://localhost:3000/'
-);
-
-const config = {
-    iot: {
-        clientIdPrefix: 'tjc-client-',
-        endpoint: 'wss://a1i76m5vdp3b1-ats.iot.us-west-2.amazonaws.com/mqtt',
-    },
-    cognito: {
-        identityPoolId: 'us-west-2:7e451140-a1aa-44a2-af36-1bc89f2fce57',
-        region: AWS_REGION,
-        userPoolId: 'us-west-2_HWngHemyi',
-        userPoolWebClientId: '337gen4ohqf8fru78ss7fe02n4'
-    },
-    oauth: {
-        domain: 'cat-detector.auth.us-west-2.amazoncognito.com',
-        scope: [ 'email', 'openid', 'phone', 'profile' ],
-        redirectSignIn: OAUTH_REDIRECT_URL,
-        redirectSignOut: OAUTH_REDIRECT_URL,
-        responseType: 'code'
-    }
-};
+const AWS_REGION = config.region;
 
 const getRandomId = () => {
     return Math.random().toString(36).substring(7);
